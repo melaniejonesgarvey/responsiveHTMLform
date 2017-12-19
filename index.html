@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+           Author: Melanie Garvey
+           Date: 4/2/17
+           Project Name: Highly Responsive HTML/CSS Form
+           Project Criteria: 
+            Revise form for easier use.
+            Style the form to reflect a British theme.
+            Utlize a variety of HTML5 inputs.
+            Validate HTML & CSS.
+            Include strategies to make the form responsive.
+        -->
+        <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Highly Responsive HTML/CSS Form/title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    </head>
+    <body>
+        <div id="bigBox" class="group">
+        <br>
+        <h1>Ministry of Defence</h1>
+        <br>
+        <br>
+            <form action="/action_page.php">
+                <div class="leftColumn">
+                <img src="images/blackCab.png" alt="Black Cab">
+                <label class="sectionHeader">Surname:</label>
+                <br>
+                    <div class="section">
+                        <div class="indent">
+                            <label class="bold">Prefix: </label><br>
+                            <div class="indent">
+                                <input type="radio" name="prefix" value="mr">Mr.<br>
+                                <input type="radio" name="prefix" value="mrs">Mrs.<br>
+                                <input type="radio" name="prefix" value="miss">Miss<br>
+                                <input type="radio" name="prefix" value="ms">Ms.<br>
+                                <input type="radio" name="prefix" value="dr">Dr.<br>
+                                <input type="radio" name="prefix" value="rev">Rev.<br>
+                                <input type="radio" name="prefix" value="rank">Rank<br>
+                                <input type="text" id="rank" name="rank" placeholder="Ex: Commodore"><br>
+                                <br>
+                                <input type="radio" name="prefix" value="other">Other<br>
+                                <input type="text" id="other" name="other" placeholder="Ex: Duchess">
+                            </div>
+                            <br>
+
+                            <label class="bold">First Name:</label><br>
+                            <div class="indent">
+                                <input type="text" id="fname" name="firstname" placeholder="Ex: James"><br>
+                            </div>
+                            <br>
+
+                            <label class="bold">Last Name:</label><br>
+                            <div class="indent">
+                                <input type="text" id="lname" name="lname" placeholder="Ex: Bond">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                <img src="images/blackCab.png" alt="Black Cab">
+                <label class="sectionHeader">Contact Information:</label>
+                <br>
+                    <div class="section">
+                        <div class="indent">
+                            <label class="bold">Contact Address: 
+                                Please remember to notify us if address changes.</label><br>
+                            <div class="indent">
+                                <input type="text" placeholder="Ex: 10 Downing Street">
+                                <input type="text" placeholder="Ex: London">
+                                <input type="text" placeholder="Ex: SW1A 2AA">
+                            </div>
+                            <br>
+
+                            <label class="bold">Contact Numbers: 
+                                Please remember to notify us if any contact number changes.</label><br>
+                            <div class="indent">
+                                <label>Home: </label><br>
+                                <div class="indent">
+                                    <input type="tel" required placeholder="00000 000000"><br>
+                                </div>
+
+                                <label>Work: </label><br>
+                                <div class="indent">
+                                    <input type="tel" required placeholder="00000 000000"><br>
+                                </div>
+
+                                <label>Mobile: </label><br>
+                                <div class="indent">
+                                    <input type="tel" required placeholder="00000 000000">
+                                </div>
+                            </div>
+                            <br>
+                        
+                            <label class="bold">Email: </label><br>
+                            <div class="indent">
+                                <input type="email" name="email" required placeholder="Ex: HRH@gmail.com">
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>    
+                    <br>
+                    <br>
+
+                <img src="images/blackCab.png" alt="Black Cab">
+                <label class="sectionHeader">Date of Birth: </label><br>
+                    <div class="section">
+                        <div class="indent">
+                            <ul>
+                                <li><input type="number" min="1" max="31" placeholder="DD"></li>
+                                <li><input type="number" min="1" max="12" placeholder="MM"></li>
+                                <li><input type="number" placeholder="YYYY"></li>
+                            </ul>
+                        </div>
+                    </div>
+                <br>
+                <br>
+                </div>
+
+                <div class="rightColumn">
+                <img src="images/blackCab.png" alt="Black Cab">
+                <label class="sectionHeader">Service Status: </label><br>
+                    <div class="section">
+                        <div class="indent">
+                            <label class="bold">Service Number: </label><br>
+                            <div class="indent">
+                                <select id="serviceNumber" name="serviceNumber">
+                                  <option value="1-5">1-5</option>
+                                  <option value="5-10">5-10</option>
+                                  <option value="11">11</option>
+                                </select>
+                            </div>
+                            <br>
+
+                            <label class="bold">Service Branch: </label><br>
+                            <div class="indent">
+                                <input type="radio" name="serviceBranch" value="rn">RN<br>
+                                <input type="radio" name="serviceBranch" value="rm">RM<br>
+                                <input type="radio" name="serviceBranch" value="army">Army<br>
+                                <input type="radio" name="serviceBranch" value="raf">RAF
+                            </div>
+                            <br>
+            
+                            <label class="bold">Current Rank: </label><br>
+                            <div class="indent">
+                                <input type="text" placeholder="Ex: Captain">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                <img src="images/blackCab.png" alt="Black Cab">
+                <label class="sectionHeader">Injury: </label><br>
+                    <div class="section">
+                        <div class="indent">
+                            <label class="bold">What date did your injuries occur? </label><br>
+                            <div class="indent">
+                                <ul>
+                                    <li><input type="number" min="1" max="31" placeholder="DD"></li>
+                                    <li><input type="number" min="1" max="12" placeholder="MM"></li>
+                                    <li><input type="number" placeholder="YYYY"></li>
+                                </ul>
+                            </div>
+                            <br>
+
+                            <label class="bold">Please tell us about the injuries you are claiming for: Include as much detail as possible.</label><br>
+                            <div class="indent">
+                                <input type="text" class="largeTextBox" placeholder="">
+                            </div>
+                            <br>
+
+                            <label class="bold">Please describe the incident. Where were you? What were you doing?</label><br>
+                            <div class="indent">
+                                <input type="text" class="largeTextBox" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                            <br>
+                            <br>
+
+                <img src="images/blackCab.png" alt="Black Cab">
+                    <label class="sectionHeader">Confirmation: </label><br>
+                    <div class="section">
+                        <div class="indent">
+                            <label class="bold">Signature:</label><br>
+                            <div class="indent">
+                                <input type="text" id="signature" placeholder="Ex: Jane Eyre">
+                            </div>
+                            <br>
+                
+                            <label class="bold">Print Name:</label><br>
+                            <div class="indent">
+                                <input type="text" name="printName" placeholder="Ex: Jane Eyre">
+                            </div>
+                            <br>
+
+                            <label class="bold">Today's Date:</label><br>
+                            <div class="indent">
+                                <ul>
+                                    <li><input type="number" min="1" max="31" placeholder="DD"></li>
+                                    <li><input type="number" min="1" max="12" placeholder="MM"></li>
+                                    <li><input type="number" placeholder="YYYY"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <br>
+                <br>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
+
