@@ -1,0 +1,203 @@
+/*
+ *  Author: Melanie Garvey
+ *  Date: 4/2/17
+ *  Project Name: Highly Responsive HTML/CSS Form
+ *  Project Criteria: 
+ *      Revise form for easier use.
+ *      Style the form to reflect a British theme.
+ *      Utlize a variety of HTML5 inputs.
+ *      Validate HTML & CSS.
+ *      Include strategies to make the form responsive.
+ *  font-family: 'Tangerine', sans-serif;
+ *  colors: 
+ *      gray/shadows - rgb(42, 40, 41)
+ *      blue - rgb(0, 36, 125)
+ *      red - rgb(232, 0, 0)
+*/
+@charset 'UTF-8';
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: rgb(255, 255, 255) url('../images/phoneBooth.png') repeat;
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    padding: 2vw;
+}
+
+#bigBox {
+    display: block;
+    width: 80vw;
+    height: auto;
+    background: rgba(255, 255, 255, 0.98);
+    margin: 0 auto;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    box-shadow: 1.5vw 1.5vw 2vw rgba(139, 11, 0, 0.9), 1vw 1vw 1.5vw rgba(255, 255, 255, 0.9) inset;
+    z-index: 1;
+}
+
+.group::after {
+    content: '.';
+    display: block;
+    height: 0vh;
+    clear: both;
+    visibility: hidden;
+}
+
+h1 {
+    font-family: 'Tangerine', sans-serif;
+    font-size: 10vw;
+    text-align: center;
+    text-shadow: .2vw .2vw .4vw rgb(42, 40, 41);
+}
+
+h1::before, h1::after {
+    content: '';
+    display: inline-block;
+    height: 3vw;
+    width: 3vw;
+    background: url('../images/modLogo.jpg') no-repeat center center;
+    background-size: contain;
+    padding: 0 2.5vw;
+    transition: transform 2s;
+}
+
+h1:hover::before {
+    transition: transform 2s;
+    transform: rotate(360deg) scale(2);
+}
+
+h1:hover::after {
+    transition: transform 2s;
+    transform: rotate(360deg) scale(2);
+}
+
+.indent {
+    padding-left: 3vw;
+}
+
+.leftColumn {
+    width: 35vw;
+    float: left;
+}
+
+.rightColumn {
+    width: 35vw;
+    float: right;
+}
+
+.sectionHeader {
+    font-family: 'Tangerine', sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    text-shadow: .1vw .1vw .2vw rgb(42, 40, 41);
+}
+
+.section {
+    background: rgba(42, 40, 41, 0.04);
+    border: .2vw solid rgb(232, 0, 0);
+    border-radius: 2vw;
+    box-shadow: .5vw .5vw 1vw rgba(42, 40, 41, 0.9), .25vw .25vw .5vw rgba(255, 255, 255, 0.9) inset;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+input[type=text], input[type=number], input[type=tel], input[type=email], select {
+    width: 100%;
+    display: inline-block;
+    border: .2vw solid #ccc;
+    border-radius: .5vw;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: .13vw .13vw .25vw rgba(42, 40, 41, 0.9), .1vw .1vw .13vw rgba(255, 255, 255, 0.9) inset;
+}
+
+input[type=submit] {
+    width: 100%;
+    line-height: 4vw;
+    text-align: center;
+    text-shadow: .3vw .3vw .4vw rgba(42, 40, 41, 0.9);
+    background: rgb(0, 36, 125);
+    border-radius: .4vw;
+    border: none;
+    font-family: 'Tangerine', sans-serif;
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    box-shadow: .5vw .5vw .7vw rgba(42, 40, 41, 0.9); 
+    transition: box-shadow 1s, background 3s;
+    cursor: pointer;
+}
+
+#signature {
+    font-family: 'Tangerine', sans-serif;
+}
+
+.largeTextBox {
+    height: 18vh;
+}
+
+input[type=submit]:hover {
+    background: rgb(232, 0, 0);
+    box-shadow: -.2vw -.2vw .3vw rgba(255, 255, 255, 0.9) inset; 
+    transition: box-shadow 1s, background 3s;
+}
+
+ul li {
+    width: 5.25vw;
+    display: inline-block;
+    list-style: none;
+}
+
+div {
+    border-radius: .5vw;
+    padding: 2vw;
+}
+
+/* tablet media query */
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 3vw;
+        padding: 0;
+    }
+
+    .rightColumn {
+        width: 100%;
+        float: left;
+    }
+
+    .leftColumn {
+        width: 100%;
+        float: none;
+    }   
+
+    .sectionHeader, input[type=submit] {
+        font-size: 5vw;
+    }
+
+    input[type=submit] {
+        line-height: 6vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 5vw;
+        padding: 0;
+    }
+
+    .sectionHeader {
+        font-size: 7vw;
+    }
+
+    input[type=submit] {
+        line-height: 8vw;
+        font-size: 7vw;
+    }
+}
